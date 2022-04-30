@@ -1,4 +1,22 @@
-<script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+
+
+<!--script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
 
 <style>
   .arjs-loader {
@@ -21,14 +39,14 @@
   }
 </style>
 
-<!-- rawgithack development URL -->
-<!--<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>-->
+< !-- rawgithack development URL -- >
+< !--<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>-- >
 
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 
 <body style='margin : 0px; overflow: hidden;'>
-   <!-- minimal loader shown until image descriptors are loaded -->
+   < !-- minimal loader shown until image descriptors are loaded -- >
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
@@ -37,21 +55,21 @@
         renderer="logarithmicDepthBuffer: true; precision: medium;"
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
-        <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
+        < !-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -- >
         <a-nft
             type='nft' url='./nft_cookie/Dino_klein'
-			<!--'https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex'-->
-			<!--'Kechs_Pic/Kecks_Pic'-->
+			< !--'https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex'-- >
+			< !--'Kechs_Pic/Kecks_Pic'-- >
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <!--a-entity
+            < !--a-entity
                 gltf-model='./trex/scene.gltf'
                 scale="5 5 5"
                 position="150 300 -100"
                 >
-            </a-entity-->
+            </a-entity-- >
 			
 			<a-box position='0 0.5 0'  color="yellow"></a-box>
         </a-nft>
 		<a-entity camera></a-entity>
     </a-scene>
-</body>
+</body-->
